@@ -1,7 +1,7 @@
 <template>
 <div>
     <p>{{msg}}</p>
-    <grid-component :columns="gridColumns" :gridData="gridData"></grid-component>
+    <grid-component :columns="gridColumns" :gridData="gridData" :options="gridOptions"></grid-component>
 </div>
 </template>
 
@@ -16,7 +16,12 @@ export default {
                 'Energia entregue', 'Status aprovação', 'Modelo', 'Preço base contratado', 'Submercado',
                 'Início fornecimento', 'Fim fornecimento', 'Início vigência', 'Fim vigência'
             ],
-            gridData: []
+            gridData: [],
+            gridOptions: {
+                skin: 'table-striped table-bordered table-hover',
+                perPageValues: [5, 10, 15, 50],
+                highlightMatches: true
+            }
         }
     },
     components: {
@@ -36,7 +41,3 @@ export default {
     }
 }
 </script>
-
-<style>
-
-</style>
