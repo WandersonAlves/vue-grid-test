@@ -1,12 +1,11 @@
 <template>
-<table>
+<table class="table table-striped">
     <thead>
         <tr>
             <th v-for="key in columns">
                 <p>
                     {{key}}
                 </p>
-                </span>
             </th>
         </tr>
     </thead>

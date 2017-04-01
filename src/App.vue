@@ -1,8 +1,7 @@
 <template>
 <div>
     <p>{{msg}}</p>
-    <grid-component :columns="gridColumns"
-                    :gridData="gridData">
+    <grid-component :columns="gridColumns" :gridData="gridData">
     </grid-component>
 </div>
 </template>
@@ -13,29 +12,28 @@ export default {
     name: 'app',
     data() {
         return {
-            msg: 'Main Window Application',
-            gridColumns: ['Autor', 'Ano'],
-            gridData: [{
-                    Autor: 'Chuck Norris',
-                    Ano: Infinity
-                },
-                {
-                    Autor: 'Bruce Lee',
-                    Ano: 9000
-                },
-                {
-                    Autor: 'Jackie Chan',
-                    Ano: 7000
-                },
-                {
-                    Autor: 'Jet Li',
-                    Ano: 8000
-                }
-            ]
+            msg: 'Vue Grid Test for some company!',
+            gridColumns: ['Código', 'Data acordo comercial', 'Natureza', 'Comprador', 'Vendedor', 'Energia referência',
+                'Energia entregue', 'Status aprovação', 'Modelo', 'Preço base contratado', 'Submercado',
+                'Início fornecimento', 'Fim fornecimento', 'Início vigência', 'Fim vigência'
+            ],
+            gridData: []
         }
     },
     components: {
         GridComponent
+    },
+    methods: {
+        getGridData() {
+            this.$http.get('https://api.myjson.com/bins/n25id').then(response => {
+                this.gridData = response.data.contracts;
+            }, response => {
+                // error callback
+            });
+        }
+    },
+    mounted() {
+        this.getGridData();
     }
 }
 </script>
