@@ -1,7 +1,10 @@
 <template>
 <div>
     <p>{{msg}}</p>
-    <grid-component :columns="gridColumns" :gridData="gridData">
+    <form id="search">
+        Search <input name="query" v-model="searchKey">
+    </form>
+    <grid-component :columns="gridColumns" :gridData="gridData" :searchKey="searchKey">
     </grid-component>
 </div>
 </template>
@@ -17,7 +20,8 @@ export default {
                 'Energia entregue', 'Status aprovação', 'Modelo', 'Preço base contratado', 'Submercado',
                 'Início fornecimento', 'Fim fornecimento', 'Início vigência', 'Fim vigência'
             ],
-            gridData: []
+            gridData: [],
+            searchKey: ''
         }
     },
     components: {
