@@ -7,75 +7,76 @@
                     <h3>Real time editing</h3>
                 </div>
             </div>
+            <br>
             <form id="row-edit">
                 <div class="row">
                     <div class="col-md-4 form-group">
-                        <p>Status Aprovação</p>
-                        <input type="text" v-model="row['Status aprovação']" required>
+                        <label class="form-control-label">Status Aprovação</label>
+                        <input class="form-control" type="text" v-model="row['Status aprovação']" required>
                     </div>
                     <div class="col-md-4 form-group">
-                        <p>Código</p>
-                        <input type="text" v-model="row['Código']" required>
+                        <label class="form-control-label">Código</label>
+                        <input class="form-control" type="text" v-model="row['Código']" required>
                     </div>
                     <div class="col-md-4 form-group">
-                        <p>Comprador</p>
-                        <input type="text" v-model="row['Comprador']" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 form-group">
-                        <p>Preço base contratado</p>
-                        <input type="text" v-model="row['Preço base contratado']" required>
-                    </div>
-                    <div class="col-md-4 form-group">
-                        <p>Fim vigência</p>
-                        <input type="text" v-model="row['Fim vigência']" required>
-                    </div>
-                    <div class="col-md-4 form-group">
-                        <p>Energia referência</p>
-                        <input type="text" v-model="row['Energia referência']" required>
+                        <label class="form-control-label">Comprador</label>
+                        <input class="form-control" type="text" v-model="row['Comprador']" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4 form-group">
-                        <p>Energia entregue</p>
-                        <input type="text" v-model="row['Energia entregue']" required>
+                        <label class="form-control-label">Preço base contratado</label>
+                        <input class="form-control" type="text" v-model="row['Preço base contratado']" required>
                     </div>
                     <div class="col-md-4 form-group">
-                        <p>Data acordo comercial</p>
-                        <input type="text" v-model="row['Data acordo comercial']" required>
+                        <label class="form-control-label">Fim vigência</label>
+                        <input class="form-control" type="text" v-model="row['Fim vigência']" required>
                     </div>
                     <div class="col-md-4 form-group">
-                        <p>Fim fornecimento</p>
-                        <input type="text" v-model="row['Fim fornecimento']" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 form-group">
-                        <p>Início fornecimento</p>
-                        <input type="text" v-model="row['Início fornecimento']" required>
-                    </div>
-                    <div class="col-md-4 form-group">
-                        <p>Início vigência</p>
-                        <input type="text" v-model="row['Início vigência']" required>
-                    </div>
-                    <div class="col-md-4 form-group">
-                        <p>Modelo</p>
-                        <input type="text" v-model="row['Modelo']" required>
+                        <label class="form-control-label">Energia referência</label>
+                        <input class="form-control" type="text" v-model="row['Energia referência']" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4 form-group">
-                        <p>Natureza</p>
-                        <input type="text" v-model="row['Natureza']" required>
+                        <label class="form-control-label">Energia entregue</label>
+                        <input class="form-control" type="text" v-model="row['Energia entregue']" required>
                     </div>
                     <div class="col-md-4 form-group">
-                        <p>Submercado</p>
-                        <input type="text" v-model="row['Submercado']" required>
+                        <label class="form-control-label">Data acordo comercial</label>
+                        <input class="form-control" type="text" v-model="row['Data acordo comercial']" required>
                     </div>
                     <div class="col-md-4 form-group">
-                        <p>Vendedor</p>
-                        <input type="text" v-model="row['Vendedor']" required>
+                        <label class="form-control-label">Fim fornecimento</label>
+                        <input class="form-control" type="text" v-model="row['Fim fornecimento']" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <label class="form-control-label">Início fornecimento</label>
+                        <input class="form-control" type="text" v-model="row['Início fornecimento']" required>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label class="form-control-label">Início vigência</label>
+                        <input class="form-control" type="text" v-model="row['Início vigência']" required>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label class="form-control-label">Modelo</label>
+                        <input class="form-control" type="text" v-model="row['Modelo']" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <label class="form-control-label">Natureza</label>
+                        <input class="form-control" type="text" v-model="row['Natureza']" required>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label class="form-control-label">Submercado</label>
+                        <input class="form-control" type="text" v-model="row['Submercado']" required>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label class="form-control-label">Vendedor</label>
+                        <input class="form-control" type="text" v-model="row['Vendedor']" required>
                     </div>
                 </div>
             </form>

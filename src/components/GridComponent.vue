@@ -1,13 +1,12 @@
 <template>
-<div class="col-md-12">
+<div class="col-md-12 table-responsive ">
     <modal-component v-bind:show="showModal" :onClose="onClose" v-bind:row="editingRow"></modal-component>
-    <table class="table table-responsive table-bordered table-hover table-sm">
+    <table class="table table-bordered table-hover table-sm">
         <thead class="thead-inverse">
             <tr>
                 <th v-for="header in columns" @click="sortBy(header)" :class="{ active: sortKey == header }">
                     {{header | upperCase}}
-                    <span class="arrow" :class="sortOrders[header] > 0 ? 'asc' : 'dsc'"></span>
-                    <span class="glyphicon glyphicon-scissors" aria-hidden="true"></span>
+                    <span class="glyphicon" :class="sortOrders[header] > 0 ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'"></span>
                 </th>
             </tr>
         </thead>
@@ -90,26 +89,3 @@ export default {
     }
 }
 </script>
-
-<style>
-.arrow {
-    display: inline-block;
-    vertical-align: middle;
-    width: 0;
-    height: 0;
-    margin-left: 5px;
-    opacity: 0.66;
-}
-
-.arrow.asc {
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-bottom: 4px solid #fff;
-}
-
-.arrow.dsc {
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 4px solid #fff;
-}
-</style>
