@@ -1,7 +1,24 @@
 <template>
-<div>
-    <p>{{msg}}</p>
-    <grid-component :columns="gridColumns" :gridData="gridData" :options="gridOptions"></grid-component>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="text-center">
+                <p>{{msg}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <form id="search">
+                Search <input name="query" v-model="searchQuery">
+            </form>
+            <br>
+        </div>
+    </div>
+    <div class="row">
+        <grid-component :columns="gridColumns" :gridData="gridData" :searchQuery="searchQuery"></grid-component>
+    </div>
 </div>
 </template>
 
@@ -17,11 +34,7 @@ export default {
                 'Início fornecimento', 'Fim fornecimento', 'Início vigência', 'Fim vigência'
             ],
             gridData: [],
-            gridOptions: {
-                skin: 'table-striped table-bordered table-hover',
-                perPageValues: [5, 10, 15, 50],
-                highlightMatches: true
-            }
+            searchQuery: ''
         }
     },
     components: {
