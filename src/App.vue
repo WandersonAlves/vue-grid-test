@@ -43,6 +43,7 @@
 import GridComponent from './components/GridComponent.vue';
 export default {
     name: 'app',
+    // NOTE: All variables declaration for this component
     data() {
         return {
             msg: 'Vue Grid Test for some company!',
@@ -53,16 +54,20 @@ export default {
             gridData: []
         }
     },
+    // NOTE: List all components that this component use
     components: {
         GridComponent
     },
+    // NOTE: List all methods that this component can use
     methods: {
         getGridData() {
+            // NOTE: $http is from vue-resource-2
             this.$http.get('https://api.myjson.com/bins/n25id').then(response => {
                 this.gridData = response.data.contracts;
             }, response => {});
         }
     },
+    // NOTE: It's like a 'init' function from Angular 1.x.x
     mounted() {
         this.getGridData();
     }

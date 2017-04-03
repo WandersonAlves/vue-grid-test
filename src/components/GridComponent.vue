@@ -51,10 +51,12 @@
 import ModalComponent from './ModalComponent.vue';
 export default {
     name: 'GridComponent',
+    // NOTE: Properties that this component will receive from another component
     props: {
         columns: Array,
         gridData: Array
     },
+    // NOTE: Startup values
     data() {
         var sortOrders = {}
         this.columns.forEach((key) => {
@@ -69,9 +71,11 @@ export default {
             searchQuery: ''
         }
     },
+    // NOTE: List all components that this component use
     components: {
         ModalComponent
     },
+    // NOTE: Computed is functions that will 'transform' values on run, like a $watch from Angular 1.x.x
     computed: {
         filteredData() {
             var sortKey = this.sortKey;
@@ -95,6 +99,7 @@ export default {
             return data;
         }
     },
+    // NOTE: List all methods that this component can use
     methods: {
         onRowClick(row) {
             console.log(row);
