@@ -10,6 +10,9 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "start": "node server.js"
   },
+  "engines": {
+    "node": "6.9.x"
+  },
   "dependencies": {
     "bower": "^1.8.0",
     "vue": "^2.2.1",
