@@ -8,78 +8,124 @@
                 </div>
             </div>
             <br>
-            <form id="row-edit">
+            <vue-form :state="formstate" @submit.prevent="onSubmit">
                 <div class="row">
-                    <div class="col-md-4 form-group">
-                        <label class="form-control-label">Status Aprovação</label>
-                        <input class="form-control" type="text" v-model="row['Status aprovação']" required>
-                    </div>
-                    <div class="col-md-4 form-group">
-                        <label class="form-control-label">Código</label>
-                        <input class="form-control" type="text" v-model="row['Código']" required>
-                    </div>
-                    <div class="col-md-4 form-group">
-                        <label class="form-control-label">Comprador</label>
-                        <input class="form-control" type="text" v-model="row['Comprador']" required>
-                    </div>
+                    <validate tag="label" class="col-md-4 form-group required-field" :class="fieldClassName(formstate.statusAprovacao)">
+                        <label>Status Aprovação</label>
+                        <input class="form-control" type="text" v-model.lazy.lazy="row['Status aprovação']" name="statusAprovacao" required>
+                        <field-messages name="statusAprovacao">
+                            <div slot="required">'Status aprovação' is a required field</div>
+                        </field-messages>
+                    </validate>
+                    <validate tag="label" class="col-md-4 form-group required-field" :class="fieldClassName(formstate.codigo)">
+                        <label>Código</label>
+                        <input class="form-control" type="text" v-model.lazy.lazy="row['Código']" name="codigo" required>
+                        <field-messages name="codigo">
+                            <div slot="required">'Código' is a required field</div>
+                        </field-messages>
+                    </validate>
+                    <validate tag="label" class="col-md-4 form-group required-field" :class="fieldClassName(formstate.comprador)">
+                        <label>Comprador</label>
+                        <input class="form-control" type="text" v-model.lazy="row['Comprador']" name="comprador" required>
+                        <field-messages name="comprador">
+                            <div slot="required">'Comprador' is a required field</div>
+                        </field-messages>
+                    </validate>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 form-group">
-                        <label class="form-control-label">Preço base contratado</label>
-                        <input class="form-control" type="text" v-model="row['Preço base contratado']" required>
-                    </div>
-                    <div class="col-md-4 form-group">
-                        <label class="form-control-label">Fim vigência</label>
-                        <input class="form-control" type="text" v-model="row['Fim vigência']" required>
-                    </div>
-                    <div class="col-md-4 form-group">
-                        <label class="form-control-label">Energia referência</label>
-                        <input class="form-control" type="text" v-model="row['Energia referência']" required>
-                    </div>
+                    <validate tag="label" class="col-md-4 form-group required-field" :class="fieldClassName(formstate.precoBase)">
+                        <label>Preço base contratado</label>
+                        <input class="form-control" type="text" v-model.lazy="row['Preço base contratado']" name="precoBase" required>
+                        <field-messages name="precoBase">
+                            <div slot="required">'Preço base contratado' is a required field</div>
+                        </field-messages>
+                    </validate>
+                    <validate tag="label" class="col-md-4 form-group required-field" :class="fieldClassName(formstate.fimVigencia)">
+                        <label>Fim vigência</label>
+                        <input class="form-control" type="text" v-model.lazy="row['Fim vigência']" name="fimVigencia" required>
+                        <field-messages name="fimVigencia">
+                            <div slot="required">'Fim vigência' is a required field</div>
+                        </field-messages>
+                    </validate>
+                    <validate tag="label" class="col-md-4 form-group required-field" :class="fieldClassName(formstate.energiaReferencia)">
+                        <label>Energia referência</label>
+                        <input class="form-control" type="text" v-model.lazy="row['Energia referência']" name="energiaReferencia" required>
+                        <field-messages name="energiaReferencia">
+                            <div slot="required">'Energia referência' is a required field</div>
+                        </field-messages>
+                    </validate>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 form-group">
-                        <label class="form-control-label">Energia entregue</label>
-                        <input class="form-control" type="text" v-model="row['Energia entregue']" required>
-                    </div>
-                    <div class="col-md-4 form-group">
-                        <label class="form-control-label">Data acordo comercial</label>
-                        <input class="form-control" type="text" v-model="row['Data acordo comercial']" required>
-                    </div>
-                    <div class="col-md-4 form-group">
-                        <label class="form-control-label">Fim fornecimento</label>
-                        <input class="form-control" type="text" v-model="row['Fim fornecimento']" required>
-                    </div>
+                    <validate tag="label" class="col-md-4 form-group required-field" :class="fieldClassName(formstate.energiaEntregue)">
+                        <label>Energia entregue</label>
+                        <input class="form-control" type="text" v-model.lazy="row['Energia entregue']" name="energiaEntregue" required>
+                        <field-messages name="energiaEntregue">
+                            <div slot="required">'Energia entregue' is a required field</div>
+                        </field-messages>
+                    </validate>
+                    <validate tag="label" class="col-md-4 form-group required-field" :class="fieldClassName(formstate.dataComercial)">
+                        <label>Data acordo comercial</label>
+                        <input class="form-control" type="text" v-model.lazy="row['Data acordo comercial']" name="dataComercial" required>
+                        <field-messages name="dataComercial">
+                            <div slot="required">'Data acordo comercial' is a required field</div>
+                        </field-messages>
+                    </validate>
+                    <validate tag="label" class="col-md-4 form-group required-field" :class="fieldClassName(formstate.fimFornecimento)">
+                        <label>Fim fornecimento</label>
+                        <input class="form-control" type="text" v-model.lazy="row['Fim fornecimento']" name="fimFornecimento" required>
+                        <field-messages name="fimFornecimento">
+                            <div slot="required">'Fim fornecimento' is a required field</div>
+                        </field-messages>
+                    </validate>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 form-group">
-                        <label class="form-control-label">Início fornecimento</label>
-                        <input class="form-control" type="text" v-model="row['Início fornecimento']" required>
-                    </div>
-                    <div class="col-md-4 form-group">
-                        <label class="form-control-label">Início vigência</label>
-                        <input class="form-control" type="text" v-model="row['Início vigência']" required>
-                    </div>
-                    <div class="col-md-4 form-group">
-                        <label class="form-control-label">Modelo</label>
-                        <input class="form-control" type="text" v-model="row['Modelo']" required>
-                    </div>
+                    <validate tag="label" class="col-md-4 form-group required-field" :class="fieldClassName(formstate.inicioFornecimento)">
+                        <label>Início fornecimento</label>
+                        <input class="form-control" type="text" v-model.lazy="row['Início fornecimento']" name="inicioFornecimento" required>
+                        <field-messages name="inicioFornecimento">
+                            <div slot="required">'Início fornecimento' is a required field</div>
+                        </field-messages>
+                    </validate>
+                    <validate tag="label" class="col-md-4 form-group required-field" :class="fieldClassName(formstate.inicioVigencia)">
+                        <label>Início vigência</label>
+                        <input class="form-control" type="text" v-model.lazy="row['Início vigência']" name="inicioVigencia" required>
+
+                        <field-messages name="inicioVigencia">
+                            <div slot="required">'Início vigência' is a required field</div>
+                        </field-messages>
+                    </validate>
+                    <validate tag="label" class="col-md-4 form-group required-field" :class="fieldClassName(formstate.modelo)">
+                        <label>Modelo</label>
+                        <input class="form-control" type="text" v-model.lazy="row['Modelo']" name="modelo" required>
+                        <field-messages name="modelo">
+                            <div slot="required">'Modelo' is a required field</div>
+                        </field-messages>
+                    </validate>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 form-group">
-                        <label class="form-control-label">Natureza</label>
-                        <input class="form-control" type="text" v-model="row['Natureza']" required>
-                    </div>
-                    <div class="col-md-4 form-group">
-                        <label class="form-control-label">Submercado</label>
-                        <input class="form-control" type="text" v-model="row['Submercado']" required>
-                    </div>
-                    <div class="col-md-4 form-group">
-                        <label class="form-control-label">Vendedor</label>
-                        <input class="form-control" type="text" v-model="row['Vendedor']" required>
-                    </div>
+                    <validate tag="label" class="col-md-4 form-group required-field" :class="fieldClassName(formstate.natureza)">
+                        <label>Natureza</label>
+                        <input class="form-control" type="text" v-model.lazy="row['Natureza']" name="natureza" required>
+                        <field-messages name="natureza">
+                            <div slot="required">'Natureza' is a required field</div>
+                        </field-messages>
+                    </validate>
+                    <validate tag="label" class="col-md-4 form-group required-field" :class="fieldClassName(formstate.submercado)">
+                        <label>Submercado</label>
+                        <input class="form-control" type="text" v-model.lazy="row['Submercado']" name="submercado" required>
+                        <field-messages name="submercado">
+                            <div slot="required">'Submercado' is a required field</div>
+                        </field-messages>
+                    </validate>
+                    <validate tag="label" class="col-md-4 form-group required-field" :class="fieldClassName(formstate.vendedor)">
+                        <label>Vendedor</label>
+                        <input class="form-control" type="text" v-model.lazy="row['Vendedor']" name="vendedor" required>
+                        <field-messages name="vendedor">
+                            <div slot="required">'Vendedor' is a required field</div>
+                        </field-messages>
+                    </validate>
                 </div>
-            </form>
+            </vue-form>
         </div>
     </div>
 </transition>
@@ -92,6 +138,22 @@ export default {
     methods: {
         close() {
             this.onClose();
+        },
+        fieldClassName: function(field) {
+            if (!field) {
+                return '';
+            }
+            if ((field.$touched || field.$submitted) && field.$valid) {
+                return 'has-success';
+            }
+            if ((field.$touched || field.$submitted) && field.$invalid) {
+                return 'has-danger';
+            }
+        }
+    },
+    data() {
+        return {
+            formstate: {}
         }
     }
 }
@@ -163,5 +225,11 @@ export default {
 .modal-leave .modal-container {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+}
+
+.required-field>label::after {
+    content: '*';
+    color: red;
+    margin-left: 0.25rem;
 }
 </style>

@@ -29,7 +29,7 @@
                 <input type="checkbox" disabled aria-label=""> You should use a datepicker for dates
             </div>
             <div class="input-group">
-                <input type="checkbox" disabled aria-label=""> There should be a validation of the inserted data
+                <input type="checkbox" checked disabled aria-label=""> There should be a validation of the inserted data
             </div>
             <br>
             <p>This application was made with Vue.js</p>
