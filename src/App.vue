@@ -17,7 +17,7 @@
                 <input type="checkbox" checked disabled aria-label=""> Sort the contracts from the table columns
             </div>
             <div class="input-group">
-                <input type="checkbox" disabled aria-label=""> Add / Remove Table Columns
+                <input type="checkbox" checked disabled aria-label=""> Add / Remove Table Columns
             </div>
             <div class="input-group">
                 <input type="checkbox" checked disabled aria-label=""> Find a line by text (from any column)
@@ -36,20 +36,7 @@
             <!-- /input-group -->
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <form id="search">
-                    <label class="form-control-label">Search</label>
-                    <input class="form-control" name="query" v-model="searchQuery">
-                </form>
-                <br>
-            </div>
-        </div>
-        <div class="row">
-            <grid-component :columns="gridColumns" :gridData="gridData" :searchQuery="searchQuery"></grid-component>
-        </div>
-    </div>
+    <grid-component :columns="gridColumns" :gridData="gridData"></grid-component>
 </div>
 </template>
 
@@ -64,8 +51,7 @@ export default {
                 'Energia entregue', 'Status aprovação', 'Modelo', 'Preço base contratado', 'Submercado',
                 'Início fornecimento', 'Fim fornecimento', 'Início vigência', 'Fim vigência'
             ],
-            gridData: [],
-            searchQuery: ''
+            gridData: []
         }
     },
     components: {
@@ -75,8 +61,7 @@ export default {
         getGridData() {
             this.$http.get('https://api.myjson.com/bins/n25id').then(response => {
                 this.gridData = response.data.contracts;
-            }, response => {
-            });
+            }, response => {});
         }
     },
     mounted() {
