@@ -6,7 +6,7 @@
                 <input type="text" class="form-control" v-model="searchQuery" placeholder="Search record...">
             </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-6">
             <div class="input-group">
                 <span class="input-group-btn">
                     <button class="btn btn-default" @click="addColumn()" type="button">Add Column</button>

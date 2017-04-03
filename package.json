@@ -16,9 +16,7 @@
   "dependencies": {
     "bower": "^1.8.0",
     "vue": "^2.2.1",
-    "vue-resource-2": "^0.8.0"
-  },
-  "devDependencies": {
+    "vue-resource-2": "^0.8.0",
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
     "babel-preset-latest": "^6.0.0",
