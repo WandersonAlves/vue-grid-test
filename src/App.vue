@@ -10,7 +10,7 @@
     <div class="jumbotron">
         <div class="container">
             <div class="page-header">
-                <h1>Hello mysterious company! <br><small>Hope you like it!</small></h1>
+                <h1>Hello mysterious company!</h1>
             </div>
             <p>So far, we have concluded these requirements:</p>
             <div class="input-group">
@@ -33,7 +33,6 @@
             </div>
             <br>
             <p>This application was made with Vue.js</p>
-            <!-- /input-group -->
         </div>
     </div>
     <grid-component :columns="gridColumns" :gridData="gridData"></grid-component>
@@ -72,5 +71,22 @@ export default {
 <style>
 body {
     padding-top: 50px;
+    font-family: 'Open Sans', sans-serif !important;
+}
+/*This make jumbotron take all of visible height*/
+.jumbotron{
+    height: 100vh;
+    background-image: url("/src/assets/01.png");
+    min-height: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.input-group {
+    color: black;
+}
+.page-header {
+    border-bottom: none;
 }
 </style>

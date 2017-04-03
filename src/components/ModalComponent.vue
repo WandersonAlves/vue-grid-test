@@ -147,7 +147,7 @@ export default {
                 return 'has-success';
             }
             if ((field.$touched || field.$submitted) && field.$invalid) {
-                return 'has-danger';
+                return 'has-error';
             }
         }
     },
