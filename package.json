@@ -2,7 +2,7 @@
   "name": "vue-grid-test",
   "description": "A Vue.js project",
   "version": "1.0.0",
-  "author": "WandersonAlves <wanderson.alves@accenture.com>",
+  "author": "WandersonAlves <wandersonalvesferreira2012@gmail.com>",
   "private": true,
   "scripts": {
     "postinstall": "bower install && npm run build",
