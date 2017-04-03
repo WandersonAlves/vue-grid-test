@@ -20,25 +20,28 @@
     </div>
     <br>
     <div class="row">
-        <div class="col-md-12 table-responsive">
-            <modal-component v-bind:show="showModal" :onClose="onClose" v-bind:row="editingRow"></modal-component>
-            <table class="table table-bordered table-hover table-sm">
-                <thead class="thead-inverse">
-                    <tr>
-                        <th v-for="header in columns" @click="sortBy(header)" :class="{ active: sortKey == header }">
-                            {{header}}
-                            <span class="glyphicon" :class="sortOrders[header] > 0 ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'"></span>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="row in filteredData">
-                        <td v-for="header in columns" @click="onRowClick(row)">
-                            {{row[header]}}
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="col-md-12">
+            <div class="panel panel-default table-responsive">
+                <div class="panel-heading">Contracts Table</div>
+                <modal-component v-bind:show="showModal" :onClose="onClose" v-bind:row="editingRow"></modal-component>
+                <table class="table table-bordered table-hover table-sm">
+                    <thead>
+                        <tr>
+                            <th v-for="header in columns" @click="sortBy(header)" :class="{ active: sortKey == header }">
+                                {{header}}
+                                <span class="glyphicon" :class="sortOrders[header] > 0 ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'"></span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="row in filteredData">
+                            <td v-for="header in columns" @click="onRowClick(row)">
+                                {{row[header]}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

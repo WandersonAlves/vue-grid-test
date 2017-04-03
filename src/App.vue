@@ -1,6 +1,6 @@
 <template>
 <div>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div>
                 <p class="navbar-text">{{msg}}</p>
@@ -32,7 +32,7 @@
                 <input type="checkbox" disabled aria-label=""> There should be a validation of the inserted data
             </div>
             <br>
-            <p>This application was made with Vue.js, and this was my first time trying it!</p>
+            <p>This application was made with Vue.js</p>
             <!-- /input-group -->
         </div>
     </div>
