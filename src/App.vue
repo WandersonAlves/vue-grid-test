@@ -33,6 +33,7 @@
             </div>
             <br>
             <p>This application was made with Vue.js</p>
+            <p>Source code on <a href="https://github.com/WandersonAlves/vue-grid-test"><span class="span-svg"></span></a></p>
         </div>
     </div>
     <grid-component :columns="gridColumns" :gridData="gridData"></grid-component>
@@ -93,5 +94,8 @@ body {
 }
 .page-header {
     border-bottom: none;
+}
+.span-svg {
+    content: url("/src/assets/svg/logo-github.svg");
 }
 </style>

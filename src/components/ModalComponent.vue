@@ -236,6 +236,7 @@ export default {
     color: red;
     margin-left: 0.25rem;
 }
+
 .overflow {
     overflow: visible;
 }
