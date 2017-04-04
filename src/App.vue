@@ -26,7 +26,7 @@
                 <input type="checkbox" checked disabled aria-label=""> Edit record
             </div>
             <div class="input-group">
-                <input type="checkbox" disabled aria-label=""> You should use a datepicker for dates
+                <input type="checkbox" disabled aria-label=""> Use datepicker for dates
             </div>
             <div class="input-group">
                 <input type="checkbox" checked disabled aria-label=""> There should be a validation of the inserted data

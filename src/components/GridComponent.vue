@@ -20,26 +20,30 @@
         </div>
     </div>
     <br>
-    <div class="panel panel-default">
-        <div class="panel-heading">Contracts Table</div>
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover table-condensed">
-                <thead>
-                    <tr>
-                        <th v-for="header in columns" @click="sortBy(header)" :class="{ active: sortKey == header }">
-                            {{header}}
-                            <span class="glyphicon" :class="sortOrders[header] > 0 ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'"></span>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="row in filteredData">
-                        <td v-for="header in columns" @click="onRowClick(row)">
-                            {{row[header]}}
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Contracts Table</div>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-condensed">
+                        <thead>
+                            <tr>
+                                <th v-for="header in columns" @click="sortBy(header)" :class="{ active: sortKey == header }">
+                                    {{header}}
+                                    <span class="glyphicon" :class="sortOrders[header] > 0 ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'"></span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="row in filteredData">
+                                <td v-for="header in columns" @click="onRowClick(row)">
+                                    {{row[header]}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -122,7 +126,7 @@ export default {
 }
 </script>
 <style>
-.table > thead > tr > th {
+.table>thead>tr>th {
     white-space: nowrap;
 }
 </style>
