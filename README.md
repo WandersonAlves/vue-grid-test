@@ -2,6 +2,8 @@
 
 > A Vue.js project
 
+> Deployed on [Heroku](http://vue-grid-test.herokuapp.com)
+
 ## Build Setup
 
 ``` bash
