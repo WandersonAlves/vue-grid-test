@@ -2,6 +2,7 @@
 <transition v-if="show" name="modal">
     <div class="modal-mask" @click="close" v-show="show" transition="modal">
         <div class="modal-container" @click.stop>
+          <span class="close-thik" @click="close"></span>
             <div class="overflow">
                 <div class="row">
                     <div class="col-md-12">
@@ -12,6 +13,7 @@
                 <vue-form :state="formstate" @submit.prevent="onSubmit">
                     <div class="row">
                         <div class="col-md-4">
+                            <!-- TODO: Make this block a component -->
                             <validate tag="label" class="form-group required-field" :class="fieldClassName(formstate.statusAprovacao)">
                                 <label>Status Aprovação</label>
                                 <input class="form-control" type="text" v-model.lazy.lazy="row['Status aprovação']" name="statusAprovacao" required>
@@ -239,5 +241,23 @@ export default {
 
 .overflow {
     overflow: visible;
+}
+
+[class*=close-] {
+    color: #777;
+    font: 14px/100% arial, sans-serif;
+    /* position: absolute; */
+    /* right: 5px; */
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+    /* top: 5px; */
+    float: right;
+    margin-top: -6px;
+    margin-right: -12px;
+    cursor: pointer;
+}
+
+.close-thik:after {
+  content: '✖'; /* UTF-8 symbol */
 }
 </style>
