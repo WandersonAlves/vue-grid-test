@@ -16,7 +16,7 @@
                             <!-- TODO: Make this block a component -->
                             <validate tag="label" class="form-group required-field" :class="fieldClassName(formstate.statusAprovacao)">
                                 <label>Status Aprovação</label>
-                                <input class="form-control" type="text" v-model.lazy.lazy="row['Status aprovação']" name="statusAprovacao" required>
+                                <input class="form-control" type="text" v-model.lazy="row['Status aprovação']" name="statusAprovacao" required>
                                 <field-messages name="statusAprovacao">
                                     <div slot="required">'Status aprovação' is a required field</div>
                                 </field-messages>
@@ -25,7 +25,7 @@
                         <div class="col-md-4 col-xs-6">
                             <validate tag="label" class="form-group required-field" :class="fieldClassName(formstate.codigo)">
                                 <label>Código</label>
-                                <input class="form-control" type="text" v-model.lazy.lazy="row['Código']" name="codigo" required>
+                                <input class="form-control" type="text" v-model.lazy="row['Código']" name="codigo" required>
                                 <field-messages name="codigo">
                                     <div slot="required">'Código' is a required field</div>
                                 </field-messages>
