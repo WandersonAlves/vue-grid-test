@@ -11,8 +11,8 @@
                 </div>
                 <br>
                 <vue-form :state="formstate" @submit.prevent="onSubmit">
-                    <div class="row">
-                        <div class="col-md-4 col-xs-6">
+                    <div class="row row-center-responsive">
+                        <div class="col-md-4 col-xs-12">
                             <!-- TODO: Make this block a component -->
                             <validate tag="label" class="form-group required-field" :class="fieldClassName(formstate.statusAprovacao)">
                                 <label>Status Aprovação</label>
@@ -22,7 +22,7 @@
                                 </field-messages>
                             </validate>
                         </div>
-                        <div class="col-md-4 col-xs-6">
+                        <div class="col-md-4 col-xs-12">
                             <validate tag="label" class="form-group required-field" :class="fieldClassName(formstate.codigo)">
                                 <label>Código</label>
                                 <input class="form-control" type="text" v-model.lazy="row['Código']" name="codigo" required>
@@ -31,7 +31,7 @@
                                 </field-messages>
                             </validate>
                         </div>
-                        <div class="col-md-4 col-xs-6">
+                        <div class="col-md-4 col-xs-12">
                             <validate tag="label" class="form-group required-field" :class="fieldClassName(formstate.comprador)">
                                 <label>Comprador</label>
                                 <input class="form-control" type="text" v-model.lazy="row['Comprador']" name="comprador" required>
@@ -41,8 +41,8 @@
                             </validate>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4 col-xs-6">
+                    <div class="row row-center-responsive">
+                        <div class="col-md-4 col-xs-12">
                             <validate tag="label" class="form-group required-field" :class="fieldClassName(formstate.precoBase)">
                                 <label>Preço base contratado</label>
                                 <input class="form-control" type="text" v-model.lazy="row['Preço base contratado']" name="precoBase" required>
@@ -51,7 +51,7 @@
                                 </field-messages>
                             </validate>
                         </div>
-                        <div class="col-md-4 col-xs-6">
+                        <div class="col-md-4 col-xs-12">
                             <validate tag="label" class="form-group required-field" :class="fieldClassName(formstate.fimVigencia)">
                                 <label>Fim vigência</label>
                                 <input class="form-control" type="text" v-model.lazy="row['Fim vigência']" name="fimVigencia" required>
@@ -60,7 +60,7 @@
                                 </field-messages>
                             </validate>
                         </div>
-                        <div class="col-md-4 col-xs-6">
+                        <div class="col-md-4 col-xs-12">
                             <validate tag="label" class="form-group required-field" :class="fieldClassName(formstate.energiaReferencia)">
                                 <label>Energia referência</label>
                                 <input class="form-control" type="text" v-model.lazy="row['Energia referência']" name="energiaReferencia" required>
@@ -70,8 +70,8 @@
                             </validate>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4 col-xs-6">
+                    <div class="row row-center-responsive">
+                        <div class="col-md-4 col-xs-12">
                             <validate tag="label" class="form-group required-field" :class="fieldClassName(formstate.energiaEntregue)">
                                 <label>Energia entregue</label>
                                 <input class="form-control" type="text" v-model.lazy="row['Energia entregue']" name="energiaEntregue" required>
@@ -80,7 +80,7 @@
                                 </field-messages>
                             </validate>
                         </div>
-                        <div class="col-md-4 col-xs-6">
+                        <div class="col-md-4 col-xs-12">
                             <validate tag="label" class="form-group required-field" :class="fieldClassName(formstate.dataComercial)">
                                 <label>Data acordo comercial</label>
                                 <input class="form-control" type="text" v-model.lazy="row['Data acordo comercial']" name="dataComercial" required>
@@ -89,7 +89,7 @@
                                 </field-messages>
                             </validate>
                         </div>
-                        <div class="col-md-4 col-xs-6">
+                        <div class="col-md-4 col-xs-12">
                             <validate tag="label" class="form-group required-field" :class="fieldClassName(formstate.fimFornecimento)">
                                 <label>Fim fornecimento</label>
                                 <input class="form-control" type="text" v-model.lazy="row['Fim fornecimento']" name="fimFornecimento" required>
@@ -99,8 +99,8 @@
                             </validate>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4 col-xs-6">
+                    <div class="row row-center-responsive">
+                        <div class="col-md-4 col-xs-12">
                             <validate tag="label" class="form-group required-field" :class="fieldClassName(formstate.inicioFornecimento)">
                                 <label>Início fornecimento</label>
                                 <input class="form-control" type="text" v-model.lazy="row['Início fornecimento']" name="inicioFornecimento" required>
@@ -109,7 +109,7 @@
                                 </field-messages>
                             </validate>
                         </div>
-                        <div class="col-md-4 col-xs-6">
+                        <div class="col-md-4 col-xs-12">
                             <validate tag="label" class="form-group required-field" :class="fieldClassName(formstate.inicioVigencia)">
                                 <label>Início vigência</label>
                                 <input class="form-control" type="text" v-model.lazy="row['Início vigência']" name="inicioVigencia" required>
@@ -119,7 +119,7 @@
                                 </field-messages>
                             </validate>
                         </div>
-                        <div class="col-md-4 col-xs-6">
+                        <div class="col-md-4 col-xs-12">
                             <validate tag="label" class="form-group required-field" :class="fieldClassName(formstate.modelo)">
                                 <label>Modelo</label>
                                 <input class="form-control" type="text" v-model.lazy="row['Modelo']" name="modelo" required>
@@ -129,8 +129,8 @@
                             </validate>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4 col-xs-6">
+                    <div class="row row-center-responsive">
+                        <div class="col-md-4 col-xs-12">
                             <validate tag="label" class="form-group required-field" :class="fieldClassName(formstate.natureza)">
                                 <label>Natureza</label>
                                 <input class="form-control" type="text" v-model.lazy="row['Natureza']" name="natureza" required>
@@ -139,7 +139,7 @@
                                 </field-messages>
                             </validate>
                         </div>
-                        <div class="col-md-4 col-xs-6">
+                        <div class="col-md-4 col-xs-12">
                             <validate tag="label" class="form-group required-field" :class="fieldClassName(formstate.submercado)">
                                 <label>Submercado</label>
                                 <input class="form-control" type="text" v-model.lazy="row['Submercado']" name="submercado" required>
@@ -148,7 +148,7 @@
                                 </field-messages>
                             </validate>
                         </div>
-                        <div class="col-md-4 col-xs-6">
+                        <div class="col-md-4 col-xs-12">
                             <validate tag="label" class="form-group required-field" :class="fieldClassName(formstate.vendedor)">
                                 <label>Vendedor</label>
                                 <input class="form-control" type="text" v-model.lazy="row['Vendedor']" name="vendedor" required>
@@ -265,5 +265,12 @@ export default {
 .close-thik:after {
     content: '✖';
     /* UTF-8 symbol */
+}
+
+@media screen and (max-width: 768px) {
+    .row-center-responsive {
+        text-align: center;
+    }
+
 }
 </style>
